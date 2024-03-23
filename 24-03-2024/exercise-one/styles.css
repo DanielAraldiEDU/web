@@ -23,7 +23,12 @@ body {
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
   flex: 1;
+
+  justify-content: flex-start;
+  align-items: center;
 
   padding: 4rem 0 0 4rem;
 }
@@ -58,9 +63,6 @@ body {
 .artist-infomations button {
   width: 11rem;
   height: 3.5rem;
-
-  justify-content: center;
-  align-items: center;
 
   background-color: #e3b635;
 
@@ -98,8 +100,6 @@ body {
   gap: 1.25rem;
 
   margin-top: 2rem;
-
-  padding-bottom: 2rem;
 }
 
 .cards div {
@@ -160,4 +160,64 @@ body {
 
 .artist img {
   height: 100%;
+}
+
+@media (max-width: 80rem) {
+  .artist img {
+    height: 60%;
+  }
+}
+
+@media (max-width: 64rem) {
+  .content {
+    justify-content: center;
+
+    padding: 4rem;
+  }
+
+  .artist-infomations {
+    margin: 0 auto;
+  }
+
+  .artist {
+    display: none;
+  }
+
+  .cards {
+    margin: 2rem auto 0;
+  }
+}
+
+@media (max-width: 48rem) {
+  .content {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  .content {
+    height: max-content;
+
+    padding: 1rem;
+  }
+
+  .artist-infomations button {
+    width: 100%;
+  }
+
+  .cards {
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 24rem) {
+  .cards div {
+    width: 100%;
+
+    justify-content: center;
+  }
 }
